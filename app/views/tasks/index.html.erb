@@ -1,0 +1,14 @@
+<h1>My tasks</h1>
+
+<ul>
+<form action="/action_page.php">
+  <% @tasks.each do |task| %>
+
+    <li>
+     <input type="checkbox" name="completed">
+      <%= link_to task.title, task_path(task) %>
+    </li>
+     <br>
+    <%= link_to "Create new Task", tasks_new_path %>
+  <% end %>
+</ul>
